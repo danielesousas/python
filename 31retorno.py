@@ -16,3 +16,16 @@ print(ola_mundo())"""
 
 par_impar()"""
 
+def par_impar():
+    num = 21
+    if(num % 2) == 0:
+        return "numero par"
+    return "numero impar"
+
+
+print(par_impar())
+
+x = 3
+if x == 0:
+    print("0")
+print("ola")
