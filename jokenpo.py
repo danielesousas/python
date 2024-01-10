@@ -25,8 +25,32 @@ def Option_machine():
 
 while True:
 
+    print("-"*30)
     want_player = Option_player()
     want_machine = Option_machine()
+    print("-"*30)
+    
+    if(want_player == "stone") and (want_machine == "scissor") \
+        or (want_player == "scissor") and (want_machine == "paper") \
+            or (want_player == "paper") and (want_machine == "stone"):
+            #player win
+            print(f"Player chose {want_player} and machine chose {want_machine}" 
+            " You Win!")
+            player_victory += 1
+
+    elif (want_player == want_machine):
+    #tie
+        print(f"Player chose {want_player} and machine chose {want_machine}"
+        " Game tied!")
+
+    else:
+        #player lose
+        print("You lose!")
+
+    print("-"*30)
+    print(f"Player Victories: {player_victory}")
+    print(f"Machine Victories: {machine_victory}")
+    print("-"*30)
 
     want_player = input("Play again?")
     if want_player in ["YES", "yes", "Yes", "y", "Y"]:
